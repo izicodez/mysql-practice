@@ -1,0 +1,12 @@
+SHOW TABLES
+SHOW DATABASES
+SELECT current_date
+SELECT current_time
+SELECT current_timestamp
+SELECT current_user
+SELECT now()
+SELECT pi()
+SELECT user()
+SELECT version()
+SELECT CURDATE()
+SELECT ADDDATE(CURDATE(), INTERVAL 3 DAY);
