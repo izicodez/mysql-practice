@@ -1,5 +1,5 @@
 
-The commmand: SHOW TABLES
+mysql> SHOW TABLES
 +------------------------------------------------------+
 | Tables_in_mysql                                      |
 |------------------------------------------------------|
@@ -42,7 +42,7 @@ The commmand: SHOW TABLES
 | time_zone_transition_type                            |
 | user                                                 |
 +------------------------------------------------------+
-The commmand: SHOW DATABASES
+mysql> SHOW DATABASES
 +--------------------+
 | Database           |
 |--------------------|
@@ -52,63 +52,93 @@ The commmand: SHOW DATABASES
 | sys                |
 | test               |
 +--------------------+
-The commmand: SELECT current_date
+mysql> SELECT current_date
 +----------------+
 | current_date   |
 |----------------|
-| 2022-02-16     |
+| 2022-02-18     |
 +----------------+
-The commmand: SELECT current_time
+mysql> SELECT current_time
 +----------------+
 | current_time   |
 |----------------|
-| 23:18:27       |
+| 8:14:11        |
 +----------------+
-The commmand: SELECT current_timestamp
+mysql> SELECT current_timestamp
 +---------------------+
 | current_timestamp   |
 |---------------------|
-| 2022-02-16 23:18:27 |
+| 2022-02-18 08:14:11 |
 +---------------------+
-The commmand: SELECT current_user
+mysql> SELECT current_user
 +----------------+
 | current_user   |
 |----------------|
 | root@localhost |
 +----------------+
-The commmand: SELECT now()
+mysql> SELECT now()
 +---------------------+
 | now()               |
 |---------------------|
-| 2022-02-16 23:18:27 |
+| 2022-02-18 08:14:11 |
 +---------------------+
-The commmand: SELECT pi()
+mysql> SELECT pi()
 +---------+
 |    pi() |
 |---------|
 | 3.14159 |
 +---------+
-The commmand: SELECT user()
+mysql> SELECT user()
 +----------------+
 | user()         |
 |----------------|
 | root@localhost |
 +----------------+
-The commmand: SELECT version()
+mysql> SELECT version()
 +-------------+
 | version()   |
 |-------------|
 | 8.0.28      |
 +-------------+
-The commmand: SELECT CURDATE()
+mysql> SELECT CURDATE()
 +-------------+
 | CURDATE()   |
 |-------------|
-| 2022-02-16  |
+| 2022-02-18  |
 +-------------+
-The commmand: SELECT ADDDATE(CURDATE(), INTERVAL 3 DAY);
-+--------------------------------------+
-| ADDDATE(CURDATE(), INTERVAL 3 DAY)   |
-|--------------------------------------|
-| 2022-02-19                           |
-+--------------------------------------+
+mysql> SELECT DATE_ADD(CURDATE(), INTERVAL 1 DAY)
++---------------------------------------+
+| DATE_ADD(CURDATE(), INTERVAL 1 DAY)   |
+|---------------------------------------|
+| 2022-02-19                            |
++---------------------------------------+
+mysql> SELECT DATE_ADD(CURDATE(), INTERVAL 1 MONTH)
++-----------------------------------------+
+| DATE_ADD(CURDATE(), INTERVAL 1 MONTH)   |
+|-----------------------------------------|
+| 2022-03-18                              |
++-----------------------------------------+
+mysql> SELECT DATE_SUB(CURDATE(), INTERVAL 1 DAY)
++---------------------------------------+
+| DATE_SUB(CURDATE(), INTERVAL 1 DAY)   |
+|---------------------------------------|
+| 2022-02-17                            |
++---------------------------------------+
+mysql> SELECT DATE_ADD('2020-12-24', INTERVAL 1 MONTH)
++--------------------------------------------+
+| DATE_ADD('2020-12-24', INTERVAL 1 MONTH)   |
+|--------------------------------------------|
+| 2021-01-24                                 |
++--------------------------------------------+
+mysql> SELECT DATE_ADD('2020-12-24', INTERVAL 30 DAY)
++-------------------------------------------+
+| DATE_ADD('2020-12-24', INTERVAL 30 DAY)   |
+|-------------------------------------------|
+| 2021-01-23                                |
++-------------------------------------------+
+mysql> SELECT DATE_ADD('2020-12-24', INTERVAL 31 DAY)
++-------------------------------------------+
+| DATE_ADD('2020-12-24', INTERVAL 31 DAY)   |
+|-------------------------------------------|
+| 2021-01-24                                |
++-------------------------------------------+

@@ -35,7 +35,7 @@ def main(command):
 
 
         with open('results', 'a+') as file:
-            file.write("\nThe commmand: " + command + "\n")
+            file.write("\nmysql> " + command + "\n")
             file.write(results)
         
     except Exception:
